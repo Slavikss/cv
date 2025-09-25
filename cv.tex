@@ -54,7 +54,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[top=5mm, bottom=15mm, left=15mm, right=15mm]{geometry}
+\usepackage[top=2mm, bottom=5mm, left=12mm, right=12mm]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -80,7 +80,8 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{4pt}{4pt}
+\titlespacing{\section}{0pt}{1pt}{2pt}
+\setlist{itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -104,7 +105,7 @@
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[0.5pt]
+    \textbf{#1} & \hfill &  #2 \\[0.25pt]
     \end{tabularx}
     }
     {
@@ -113,10 +114,10 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[0.5pt]
+    \textbf{#1} & \hfill &  #2 \\[0.25pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[leftmargin=1em,label=--,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]
+    \begin{itemize}[leftmargin=1em,label=--]
     }
     {
     \end{itemize}
@@ -142,7 +143,7 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Vyacheslav Guch} \\[7.5pt]
+\Huge{Vyacheslav Guch} \\[4pt]
 \href{https://github.com/Slavikss}{\raisebox{-0.05\height}\faGithub\ Slavikss} \ $|$ \ 
 \href{https://linkedin.com/in/vguch}{\raisebox{-0.05\height}\faLinkedin\ vguch} \ $|$ \ 
 \href{https://slavikss.github.io/blog}{\raisebox{-0.05\height}\faGlobe \ my blog} \ $|$ \ 
@@ -156,21 +157,32 @@
 
 %Interests/ Keywords/ Summary
 \section{Summary}
-AI Product Manager with 3+ years of experience and deep ML product \& technical expertise; led cross-functional teams up to 20 engineers to ship classic ML, LLM based, GenAI based products. Highly engaged in every project, from ideation to delivery with full ownership of product and strategy.
+Product Manager with deep ML product \& technical expertise; led cross-functional teams up to 20 engineers to ship classic ML, LLM based, GenAI based products. Highly engaged in every project, from ideation to delivery with full ownership of product and strategy.
 
 %Experience
 \section{Work Experience}
 
-\begin{jobshort}{Designation}{Jan 2021 - present}
-long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width
+\begin{joblong}{Product Manager — Stealth Startup(10+ years on HRtech market)}{Aug 2024 – Present}
+\item Owned product strategy \& P\&L for three AI solutions (Recruiter, Methodologist, Controller) that cut recruiter costs for 43\%, reduced quiz creation time for 58\% and sped strategy planning from 1 month to 4 days; led discovery→pivot→commercialisation across cross-functional teams.
+\item Led strategic pivots and product-market fit validation using JTBD, 30+ depth interviews; Delivered prod-ready solutions for 3 enterprise clients(10k+ employees) within 2 months
+\end{joblong}
+
+
+\begin{joblong}{Product Manager — \href{https://shperling.ai}{shperling.ai}(AI native startup for Operations)}{June 2024 – Aug 2025}
+\item Owned product strategy and P\&L for enterprise RAG offerings from scratch: led PMF discovery, defined value proposition and pricing, and converted strategy into \$22k pilot revenue and a \$5M valuation; drove a market-informed pivot to an Operations Co-Pilot product.
+\item Delivered 3 enterprise RAG deployments, text-to-SQL analytics, AI support automation; achieved 95\% model accuracy and 90\% relevance, cut client costs by 50\+\% and analytics time by 87\%
+\item Built the GTM engine: implemented ABM cadence (3k+ contacts, 5\% conversion, 15\% pilot conversion), accelerated feature delivery by 20\%, and generated 10+ enterprise pilot requests
+\end{joblong}
+
+
+\begin{jobshort}{Project Manager — Daily Challenge VC}{Sept 2023 – June 2024}
+Built data-driven OKR system for program, scaled from 40 to 150 MAU through automated business operations(Notion, Airtable, Make) leading 10 cross-functional teams, driving \textbf{40\% retention increase}. Created dashboards and KPI taxonomy for exec decision-making.
 \end{jobshort}
 
 
-\begin{joblong}{Designation}{Mar 2019 - Jan 2021}
-\item long long line of blah blah that will wrap when the table fills the column width
-\item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
-\end{joblong}
-  
+\begin{jobshort}{Big Data Analyst — Beeline Kazakhstan}{June 2023 – Nov 2023}
+Worked with data pipelines (HDFS, PySpark, Kafka, PostgreSQL), shipped SQL triggers for gamification. Led \textbf{Multisim model refactor} — improved F1 by 30\% through feature optimization.
+\end{jobshort}
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
@@ -181,20 +193,19 @@ long long line of blah blah that will wrap when the table fills the column width
 
 \begin{jobshort}{Google Project Management Specialization, \textit{Coursera}}{2025}
 \end{jobshort}
-\noindent -- Mastered end2end Agile Project lifecycle management\\
-\noindent -- 6 hands-on projects including Agile transformation case study
+\noindent Mastered end2end Agile Project management through 6 hands-on projects from scratch
 
 %Projects
 \section{Projects}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{PM study Cheatsheets} & \hfill \href{https://slavikss.github.io/blog}{Link} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Built a 400+ page, consolidated set of product-management playbooks—frameworks, checklists, decision trees, and experiment templates—distilled from academic research and top-company practices. The toolkit shortens the hypothesis-to-release cycle, de-risks decisions, and standardizes product processes for teams.}  \\
+\multicolumn{2}{@{}X@{}}{400+ page PM toolkit with frameworks, checklists, and experiment templates from top companies. Standardizes decision-making, enables teams to ship faster with lower risk.}  \\
 \end{tabularx}
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{DANO olympiad, HSE x Tinkoff} & \hfill \href{https://github.com/Slavikss/tinkoff-cinema-tickets}{Link to repo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Led the team of 5 people on analytics lifecycle on movie-ticket sales—EDA, hypothesis generation and testing, statistical validation, and visualization—setting methodology, assigning roles, and ensuring reproducible code. Delivered actionable recommendations on scheduling, pricing, and marketing, packaged for business stakeholders and got winner prize.}  \\
+\multicolumn{2}{@{}X@{}}{Led 5-person analytics team through movie-ticket sales lifecycle EDA, hypothesis testing, and statistical validation. Delivered recommendations on pricing and scheduling that got us winner place.}  \\
 \end{tabularx}
 
 % %----------------------------------------------------------------------------------------
@@ -214,4 +225,5 @@ long long line of blah blah that will wrap when the table fills the column width
 \textbf{Core Competencies:} End2end Product and strategy ownership, P\&L and unit-economics, Project management, Product Analytics, GTM, Market research \\
 \textbf{Certifications:} Google PM, karpov.courses SQL, Tinkoff DL, YSDA NLP, HSE PM \\
 
+\enlargethispage{-\baselineskip}
 \end{document}
