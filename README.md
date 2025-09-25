@@ -1,3 +1,12 @@
+# My CV
+
+This repository contains my curriculum vitae (CV) built with LaTeX. The main file is `cv.tex`. 
+
+Full CV available at: https://slavikss.github.io/cv/cv.pdf
+
+<details>
+<summary>autoCV docs</summary>
+
 # autoCV
 
 A clean CV template in LaTeX along with a GitHub action that complies the `*.tex` file and publishes a new PDF version when new changes are pushed to the repo
@@ -51,4 +60,6 @@ PS: If you liked the template, do star :star: it! Thanks!
 - [gradfolio](https://github.com/jitinnair1/gradfolio) - a minimal, quick-setup template for a personal website/portfolio
 - [Tail](https://github.com/jitinnair1/tail) - a minimal, quick-setup template for a blog
 - [snippet-book](https://github.com/jitinnair1/snippet-book) -terminal style, clean Jekyll blog theme with catppuccin colours
+
+</details>
 
