@@ -54,7 +54,7 @@
 \RequirePackage{color}
 \RequirePackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[scale=0.9]{geometry}
+\usepackage[top=5mm, bottom=15mm, left=15mm, right=15mm]{geometry}
 
 %tabularx environment
 \usepackage{tabularx}
@@ -64,6 +64,7 @@
 
 % centered version of 'X' col. type
 \newcolumntype{C}{>{\centering\arraybackslash}X} 
+\newcolumntype{L}{>{\RaggedRight\hspace{0pt}\arraybackslash}X} 
 
 %to prevent spillover of tabular into next pages
 \usepackage{supertabular}
@@ -79,7 +80,7 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
-\titlespacing{\section}{0pt}{10pt}{10pt}
+\titlespacing{\section}{0pt}{4pt}{4pt}
 
 %for publications
 \usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
@@ -97,12 +98,13 @@
 %debug page outer frames
 %\usepackage{showframe}
 
+\usepackage{ragged2e}
 
 % job listing environments
 \newenvironment{jobshort}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[0.5pt]
     \end{tabularx}
     }
     {
@@ -111,17 +113,15 @@
 \newenvironment{joblong}[2]
     {
     \begin{tabularx}{\linewidth}{@{}l X r@{}}
-    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \textbf{#1} & \hfill &  #2 \\[0.5pt]
     \end{tabularx}
     \begin{minipage}[t]{\linewidth}
-    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    \begin{itemize}[leftmargin=1em,label=--,itemsep=0pt,topsep=0pt,parsep=0pt,partopsep=0pt]
     }
     {
     \end{itemize}
     \end{minipage}    
     }
-
-
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -142,12 +142,12 @@
 % \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
-\Huge{Your Name} \\[7.5pt]
-\href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
-\href{https://linkedin.com/in/username}{\raisebox{-0.05\height}\faLinkedin\ username} \ $|$ \ 
-\href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
-\href{mailto:email@mysite.com}{\raisebox{-0.05\height}\faEnvelope \ email@mysite.com} \ $|$ \ 
-\href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
+\Huge{Vyacheslav Guch} \\[7.5pt]
+\href{https://github.com/Slavikss}{\raisebox{-0.05\height}\faGithub\ Slavikss} \ $|$ \ 
+\href{https://linkedin.com/in/vguch}{\raisebox{-0.05\height}\faLinkedin\ vguch} \ $|$ \ 
+\href{https://slavikss.github.io/blog}{\raisebox{-0.05\height}\faGlobe \ my blog} \ $|$ \ 
+\href{mailto:vyacheslavguch@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ vyacheslavguch@gmail.com} 
+% \href{tel:+000000000000}{\raisebox{-0.05\height}\faMobile \ +00.00.000.000} \\
 \end{tabularx}
 
 %----------------------------------------------------------------------------------------
@@ -171,47 +171,47 @@ long long line of blah blah that will wrap when the table fills the column width
 \item again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah. again, long long line of blah blah that will wrap when the table fills the column width but this time even more long long line of blah blah
 \end{joblong}
   
-%Projects
-\section{Projects}
-
-\begin{tabularx}{\linewidth}{ @{}l r@{} }
-\textbf{Some Project} & \hfill \href{https://some-link.com}{Link to Demo} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width long long line of blah blah that will wrap when the table fills the column width}  \\
-\end{tabularx}
-
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 \section{Education}
-\begin{tabularx}{\linewidth}{@{}l X@{}}	
-2030 - present & PhD (Subject) at \textbf{University} \hfill \normalsize (GPA: 4.0/4.0) \\
+\begin{jobshort}{HSE University, \textit{Applied Math \& CS| Merit Scholar}}{}
+\end{jobshort}
+\noindent Main courses: Linear Algebra, Calculus, Algorithms, ML, efficient DL, MLOps, CV, LLMs
 
-2023 - 2027 & Bachelor's Degree at \textbf{College} \hfill (GPA: 4.0/4.0) \\ 
+\begin{jobshort}{Google Project Management Specialization, \textit{Coursera}}{2025}
+\end{jobshort}
+\noindent -- Mastered end2end Agile Project lifecycle management\\
+\noindent -- 6 hands-on projects including Agile transformation case study
 
-2022 & Class 12th Some Board \hfill  (Grades) \\
+%Projects
+\section{Projects}
 
-2021 & Class 10th Some Board \hfill  (Grades) \\
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{PM study Cheatsheets} & \hfill \href{https://slavikss.github.io/blog}{Link} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Built a 400+ page, consolidated set of product-management playbooks—frameworks, checklists, decision trees, and experiment templates—distilled from academic research and top-company practices. The toolkit shortens the hypothesis-to-release cycle, de-risks decisions, and standardizes product processes for teams.}  \\
 \end{tabularx}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{DANO olympiad, HSE x Tinkoff} & \hfill \href{https://github.com/Slavikss/tinkoff-cinema-tickets}{Link to repo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Led the team of 5 people on analytics lifecycle on movie-ticket sales—EDA, hypothesis generation and testing, statistical validation, and visualization—setting methodology, assigning roles, and ensuring reproducible code. Delivered actionable recommendations on scheduling, pricing, and marketing, packaged for business stakeholders and got winner prize.}  \\
+\end{tabularx}
+
+% %----------------------------------------------------------------------------------------
+% %	PUBLICATIONS
+% %----------------------------------------------------------------------------------------
+% \section{Publications}
+% \begin{refsection}[citations.bib]
+% \nocite{*}
+% \printbibliography[heading=none]
+% \end{refsection}
 
 %----------------------------------------------------------------------------------------
 %	SKILLS
 %----------------------------------------------------------------------------------------
 \section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-Some Skills &  \normalsize{This, That, Some of this and that etc.}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
-\end{tabularx}
-
-\vfill
-\center{\footnotesize Last updated: \today}
+\textbf{Technical Skills:} ML System Design, Agentic AI, SQL, Python, A/B-testing, ML Evaluation, Scenario modelling \\
+\textbf{Core Competencies:} End2end Product and strategy ownership, P\&L and unit-economics, Project management, Product Analytics, GTM, Market research \\
+\textbf{Certifications:} Google PM, karpov.courses SQL, Tinkoff DL, YSDA NLP, HSE PM \\
 
 \end{document}
